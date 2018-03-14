@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/aspnet-mvc-template/v15/.suo
+/.vs/VSWorkspaceState.json
+/.vs
+/packages
+/**/bin
+/**/obj/
+/**/node_modules

@@ -1,0 +1,25 @@
+﻿// Custom.scss 
+// Option B: Include parts of Bootstrap 
+
+// Your variable overrides
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+$enable-rounded: false;
+
+$font-family-sans-serif: "Montserrat";
+$font-family-monospace: "Inconsolata";
+
+$primary: #3C2DC2;
+$secondary: #86FEF5;
+$danger: #953C20; 
+$success: #477F38;
+$warning: #DDB967;
+$info: #8283E3;
+$light: #F8F9FA;
+$dark: #151238;
+
+$body-bg: $secondary;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+

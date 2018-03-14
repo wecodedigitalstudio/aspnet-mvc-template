@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/css/custom.min.css" />
+    <link rel="stylesheet" href="~/Content/plugins/datatables/css/jquery.dataTables.css" />
+
+
+
+    <script src="~/Content/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Content/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Content/plugins/datatables/jquery.dataTables.js"></script>
+
+    @if (Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["useBundle"]))
+    {
+        <script src="~/Content/plugins/vue/vue.min.js"></script>
+        <script src="~/Content/js/bundle.min.js"></script>
+    }
+    else
+    {
+        <script src="~/Content/plugins/vue/vue.js"></script>
+        <script src="~/Scripts/common/datatables.js"></script>
+        <script src="~/Scripts/Devs/index.js"></script>
+        <script src="~/Scripts/Devs/details.js"></script>
+    }
+
+    <script>
+        var apiUrl = '@string.Format("{0}://{1}:{2}/api/", Request.Url.Scheme, Request.Url.Host, @System.Configuration.ConfigurationManager.AppSettings["apiUrlPort"])';
+    </script>
+
+    <title>We-Code Template</title>
+</head>
+<body>
+
+    <!-- Fixed navbar -->
+    <header>
+        @Html.Partial("_Menu")
+    </header>
+
+    <!-- Body -->
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
+
+    @Html.Partial("_Waiter")
+
+</body>
+</html>
