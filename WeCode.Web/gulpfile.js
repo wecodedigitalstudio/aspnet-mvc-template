@@ -18,6 +18,20 @@ gulp.task("bootstrap", () => {
         .pipe(gulp.dest("Content/plugins/bootstrap"));
 });
 
+// Select2
+gulp.task("select2", () => {
+    gulp.src(['node_modules/select2/dist/js/select2.full.min.js', 'node_modules/select2/dist/js/i18n/it.js'])
+        .pipe(uglify())
+        .pipe(gulp.dest("Content/plugins/select2"));
+
+    gulp.src([
+        'node_modules/select2/dist/css/select2.min.css'
+    ])
+        .pipe(gulp.dest("Content/plugins/select2/css"));
+
+});
+
+
 // DataTables
 gulp.task("datatables", () => {
     gulp.src('node_modules/datatables.net/js/jquery.dataTables.js')
@@ -51,6 +65,7 @@ gulp.task("bundle", () => {
         .pipe(uglify())
         .pipe(gulp.dest("Content/js/"));
 });
+
 
 gulp.task('build-Debug', () => { });
 
