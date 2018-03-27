@@ -19,7 +19,7 @@ function DevsIndex() {
             {
                 "data": null,
                 "render": function (data, type, row) {
-                    return '<a class="edit" href="/devs/details?id=' + row.Id + '" >details</a>';
+                    return '<a class="edit" href="/devs/details?id=' + row.Id + '" >Details</a>';
                 }
             }
         ]
