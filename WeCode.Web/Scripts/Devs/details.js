@@ -39,7 +39,7 @@ function DevsDetails(id) {
                 });
             }
         }
-    })
+    });
 
     Vue.config.devtools = true;
 
