@@ -11,7 +11,7 @@ $font-family-sans-serif: "Montserrat";
 $font-family-monospace: "Inconsolata";
 
 $primary: #3C2DC2;
-$secondary: #86FEF5;
+$secondary: #fff;
 $danger: #953C20; 
 $success: #477F38;
 $warning: #DDB967;
@@ -23,3 +23,10 @@ $body-bg: $secondary;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+.form-control {
+    border-radius: 4px;
+}
+
+.btn-primary {
+    border-radius: 4px;
+}
