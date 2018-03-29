@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props" Condition="Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props')" />
   <Import Project="..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props" Condition="Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
@@ -28,6 +29,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -203,9 +205,10 @@
       <DependentUpon>custom.css</DependentUpon>
     </Content>
     <Content Include="gulpfile.js" />
-    <Content Include="Scripts\common\datatables.js" />
-    <Content Include="Scripts\Devs\details.js" />
-    <Content Include="Scripts\Devs\index.js" />
+    <Content Include="JsScripts\common\datatables.js" />
+    <Content Include="JsScripts\Devs\details.js" />
+    <Content Include="JsScripts\Devs\index.js" />
+    <Content Include="Scripts\Devs\index.page.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -226,18 +229,29 @@
     <Content Include="Views\Devs\Details.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\we-code-template - Web Deploy.pubxml" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\Devs\index.page.ts" />
+    <TypeScriptCompile Include="Scripts\models\developer.model.ts" />
+    <TypeScriptCompile Include="Scripts\pages\devs.page.ts" />
+    <TypeScriptCompile Include="Scripts\services\devs.service.ts" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="package-lock.json" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
