@@ -180,6 +180,10 @@
     <Content Include="Content\plugins\datatables\images\sort_desc.png" />
     <Content Include="Content\plugins\datatables\images\sort_desc_disabled.png" />
     <Content Include="Content\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Content\plugins\datepicker\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\plugins\datepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\plugins\datepicker\js\moment.min.js" />
+    <Content Include="Content\plugins\datepicker\js\vue-bootstrap-datetimepicker.min.js" />
     <Content Include="Content\plugins\jquery\jquery.min.js" />
     <Content Include="Content\plugins\select2\css\select2.min.css" />
     <Content Include="Content\plugins\select2\it.js" />

@@ -2,11 +2,11 @@
 
 function DevsDetails(id) {
 
-    console.log("devs - details");
-
     //https://vuejs.org/v2/examples/select2.html
     //https://jsfiddle.net/ankurk91/zupazg2u/
     //https://jsfiddle.net/gmsa/kjj6ufcu/
+
+    Vue.component('date-picker', VueBootstrapDatetimePicker.default);
 
     var app = new Vue({
         el: '#dev-details',
@@ -17,7 +17,12 @@ function DevsDetails(id) {
             lastName: '',
             birthday: '',
             category: '',
-
+            config: {
+                format: 'DD/MM/YYYY',
+                useCurrent: false,
+                showClear: true,
+                showClose: false
+            },
             categories: []
         },
         methods: {
@@ -32,9 +37,8 @@ function DevsDetails(id) {
                         Birthday: app.birthday,
                         Category: app.category
                     },
-                    dataType: 'json',
-                    success: function (result) {
-                        alert("Saved");
+                    success: function () {
+                        alert("L'utente è stato salvato correttamente!");
                     }
                 });
             }
@@ -50,7 +54,6 @@ function DevsDetails(id) {
             app.lastName = result.LastName;
             app.birthday = result.Birthday;
             app.category = result.Category;
-
         }
     });
 
@@ -58,5 +61,6 @@ function DevsDetails(id) {
     $.getJSON(apiUrl + 'categories', function (result) {
         app.categories = result;
     });
+
 
 }

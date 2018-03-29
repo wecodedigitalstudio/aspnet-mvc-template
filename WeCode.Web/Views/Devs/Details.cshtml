@@ -1,6 +1,4 @@
-﻿
-
-<div id="dev-details" class="container-fluid">
+﻿<div id="dev-details" class="container-fluid">
 
     <h1 class="mt-5">{{title}}</h1>
 
@@ -21,7 +19,7 @@
 
     <!-- Category -->
     <div class="row">
-        <label class="col-md-2" >Category</label>
+        <label class="col-md-2">Category</label>
         <div class="col-md-4">
             <select class="form-control">
                 <option v-for="category in categories">{{category}}</option> 
@@ -30,7 +28,7 @@
 
         <label class="col-md-2">Birthday</label>
         <div class="col-md-4">
-            <input type="text" class="form-control" v-model="birthday" />
+            <date-picker class="form-control" v-model="birthday" :config="config" placeholder="DD/MM/YYYY"></date-picker>
         </div>
     </div>
 
@@ -45,11 +43,10 @@
 
 
 <script>
-
     jQuery(document).ready(function () {
         var devsDetails = new DevsDetails(@Request["id"]);
-    });
 
+    });
 </script>
 
 

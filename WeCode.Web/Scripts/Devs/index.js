@@ -16,6 +16,7 @@ function DevsIndex() {
             { "data": "FirstName" },
             { "data": "LastName" },
             { "data": "Category" },
+            { "data": "Birthday" },
             {
                 "data": null,
                 "render": function (data, type, row) {
