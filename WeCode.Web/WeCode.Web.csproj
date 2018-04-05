@@ -162,10 +162,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DevsController.cs" />
+    <Compile Include="Controllers\ComponentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DataTablesResult.cs" />
     <Compile Include="Models\Developer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,6 +190,7 @@
     <Content Include="Content\plugins\select2\css\select2.min.css" />
     <Content Include="Content\plugins\select2\it.js" />
     <Content Include="Content\plugins\select2\select2.full.min.js" />
+    <Content Include="Content\plugins\vue-select\vue-select.js" />
     <Content Include="Content\plugins\vue\vue.js" />
     <Content Include="Content\plugins\vue\vue.min.js" />
     <Content Include="favicon.ico" />
@@ -208,6 +211,7 @@
     </Content>
     <Content Include="gulpfile.js" />
     <Content Include="Scripts\common\datatables.js" />
+    <Content Include="Scripts\components\select2.component.js" />
     <Content Include="Scripts\Devs\details.js" />
     <Content Include="Scripts\Devs\index.js" />
     <Content Include="Web.config">
@@ -230,6 +234,7 @@
     <Content Include="Views\Devs\Details.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\we-code-template - Web Deploy.pubxml" />
+    <Content Include="Views\Components\Select2.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

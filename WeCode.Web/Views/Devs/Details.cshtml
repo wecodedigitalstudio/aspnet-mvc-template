@@ -21,9 +21,10 @@
     <div class="row">
         <label class="col-md-2">Category</label>
         <div class="col-md-4">
-            <select class="form-control">
-                <option v-for="category in categories">{{category}}</option> 
-            </select>
+            <select2 :placeholder="'Select category'"
+                     :options="categories" :value.sync="category"
+                     :value-field="'Code'" :text-field="'Description'" />
+
         </div>
 
         <label class="col-md-2">Birthday</label>

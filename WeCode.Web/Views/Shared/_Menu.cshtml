@@ -7,6 +7,7 @@
     @{ 
         string homeActive = ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "";
         string devsActive = ViewContext.RouteData.Values["controller"].ToString() == "Devs" ? "active" : "";
+        string componentActive = ViewContext.RouteData.Values["controller"].ToString() == "Components" ? "active" : "";
     }
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -17,6 +18,10 @@
             </li>
             <li class="nav-item @devsActive">
                 @Html.ActionLink("Devs", "Index", "Devs", null, new { @class = "nav-link" })
+                @*<a class="nav-link" href="#">Devs</a>*@
+            </li>
+            <li class="nav-item @devsActive">
+                @Html.ActionLink("Select2", "Select2", "Components", null, new { @class = "nav-link" })
                 @*<a class="nav-link" href="#">Devs</a>*@
             </li>
         </ul>

@@ -6,6 +6,7 @@ function DevsDetails(id) {
     //https://jsfiddle.net/ankurk91/zupazg2u/
     //https://jsfiddle.net/gmsa/kjj6ufcu/
 
+
     Vue.component('date-picker', VueBootstrapDatetimePicker.default);
 
     var app = new Vue({
@@ -23,7 +24,7 @@ function DevsDetails(id) {
                 showClear: true,
                 showClose: false
             },
-            categories: []
+            categories: [],
         },
         methods: {
             save: function () {
@@ -47,19 +48,20 @@ function DevsDetails(id) {
 
     Vue.config.devtools = true;
 
-    // devs/details
-    $.getJSON(apiUrl + 'devs/details', { id: app.id }, function (result) {
-        if (result) {
-            app.firstName = result.FirstName;
-            app.lastName = result.LastName;
-            app.birthday = result.Birthday;
-            app.category = result.Category;
-        }
-    });
-
     // categories 
     $.getJSON(apiUrl + 'categories', function (result) {
         app.categories = result;
+
+        // devs/details
+        $.getJSON(apiUrl + 'devs/details', { id: app.id }, function (result) {
+            if (result) {
+                app.firstName = result.FirstName;
+                app.lastName = result.LastName;
+                app.birthday = result.Birthday;
+                app.category = result.Category;
+            }
+        });
+
     });
 
 

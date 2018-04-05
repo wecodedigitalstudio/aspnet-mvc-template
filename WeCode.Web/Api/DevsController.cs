@@ -63,6 +63,7 @@ namespace WeCode.Web.Api
             {
                 selectedDev.FirstName = dev.FirstName;
                 selectedDev.LastName = dev.LastName;
+                selectedDev.Category = dev.Category;
             }
 
             return Ok();

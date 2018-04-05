@@ -15,7 +15,27 @@ namespace WeCode.Web.Api
         [HttpGet]
         public IHttpActionResult Index()
         {
-            return Ok(new List<string>() { "FullStack", "FrontEnd", "BackEnd" });
+            var categories = new List<Category>();
+
+            categories.Add(new Category()
+            {
+                Code = "FullStack",
+                Description = "Full Stack"
+            });
+
+            categories.Add(new Category()
+            {
+                Code = "BackEnd",
+                Description = "Back End"
+            });
+
+            categories.Add(new Category()
+            {
+                Code = "FrontEnd",
+                Description = "Front End"
+            });
+
+            return Ok(categories);
         }
 
     }
