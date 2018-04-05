@@ -29,7 +29,7 @@
 
         <label class="col-md-2">Birthday</label>
         <div class="col-md-4">
-            <date-picker class="form-control" v-model="dev.Birthday" :config="config" placeholder="DD/MM/YYYY"></date-picker>
+            <datepicker :value.sync="dev.Birthday" />            
         </div>
     </div>
 

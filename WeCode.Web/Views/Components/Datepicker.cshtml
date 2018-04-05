@@ -1,0 +1,28 @@
+﻿<p>Datepicker</p>
+
+<div id="datepicker-demo">
+    <datepicker :value.sync="date" v-on:value-changed="onValueChanged" />
+</div>
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        var app = new Vue({
+            el: '#datepicker-demo',
+            data: {
+                date: '26/04/2018'
+            },
+            methods: {
+                onValueChanged: function (newValue) {
+                    console.log("on value changed", newValue);
+                    console.log("on value changed", this.date);
+                }
+            }
+
+        });
+
+    });
+
+
+</script>

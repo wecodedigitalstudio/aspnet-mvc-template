@@ -174,6 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\js\bundle.min.js" />
+    <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.it.min.js" />
+    <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
     <Content Include="Content\plugins\bootstrap\bootstrap.min.js" />
     <Content Include="Content\plugins\datatables\css\jquery.dataTables.css" />
     <Content Include="Content\plugins\datatables\images\sort_asc.png" />
@@ -182,10 +185,6 @@
     <Content Include="Content\plugins\datatables\images\sort_desc.png" />
     <Content Include="Content\plugins\datatables\images\sort_desc_disabled.png" />
     <Content Include="Content\plugins\datatables\jquery.dataTables.js" />
-    <Content Include="Content\plugins\datepicker\css\bootstrap-datetimepicker.css" />
-    <Content Include="Content\plugins\datepicker\js\bootstrap-datetimepicker.min.js" />
-    <Content Include="Content\plugins\datepicker\js\moment.min.js" />
-    <Content Include="Content\plugins\datepicker\js\vue-bootstrap-datetimepicker.min.js" />
     <Content Include="Content\plugins\jquery\jquery.min.js" />
     <Content Include="Content\plugins\select2\css\select2.min.css" />
     <Content Include="Content\plugins\select2\it.js" />
@@ -210,6 +209,7 @@
     </Content>
     <Content Include="gulpfile.js" />
     <Content Include="Scripts\common\datatables.js" />
+    <Content Include="Scripts\components\datepicker.component.js" />
     <Content Include="Scripts\components\select2.component.js" />
     <Content Include="Scripts\Devs\details.js" />
     <Content Include="Scripts\Devs\index.js" />
@@ -234,6 +234,7 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\we-code-template - Web Deploy.pubxml" />
     <Content Include="Views\Components\Select2.cshtml" />
+    <Content Include="Views\Components\Datepicker.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -2,13 +2,6 @@
 
 function DevsDetails(id) {
 
-    //https://vuejs.org/v2/examples/select2.html
-    //https://jsfiddle.net/ankurk91/zupazg2u/
-    //https://jsfiddle.net/gmsa/kjj6ufcu/
-
-
-    Vue.component('date-picker', VueBootstrapDatetimePicker.default);
-
     var app = new Vue({
         el: '#dev-details',
         data: {
@@ -16,13 +9,7 @@ function DevsDetails(id) {
             dev: {
                 Id: id
             },
-            config: {
-                format: 'DD/MM/YYYY',
-                useCurrent: false,
-                showClear: true,
-                showClose: false
-            },
-            categories: [],
+            categories: []
         },
         methods: {
             save: function () {

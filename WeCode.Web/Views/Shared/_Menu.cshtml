@@ -14,15 +14,15 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item @homeActive">
                 @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
-                @*<a class="nav-link" href="@Url.Action()">Home <span class="sr-only">(current)</span></a>*@
             </li>
             <li class="nav-item @devsActive">
                 @Html.ActionLink("Devs", "Index", "Devs", null, new { @class = "nav-link" })
-                @*<a class="nav-link" href="#">Devs</a>*@
             </li>
             <li class="nav-item @devsActive">
                 @Html.ActionLink("Select2", "Select2", "Components", null, new { @class = "nav-link" })
-                @*<a class="nav-link" href="#">Devs</a>*@
+            </li>
+            <li class="nav-item @devsActive">
+                @Html.ActionLink("Datepicker", "Datepicker", "Components", null, new { @class = "nav-link" })
             </li>
         </ul>
     </div>

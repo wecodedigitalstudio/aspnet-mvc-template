@@ -25,10 +25,13 @@ gulp.task("select2", () => {
 
 });
 
-// Datepicker
-gulp.task("datepicker", () => {
-    gulp.src(['node_modules/vue-bootstrap-datetimepicker/dist/vue-bootstrap-datetimepicker.min.js'])
-        .pipe(gulp.dest("Content/plugins/datepicker/js"));
+// Bootstrap Datepicker
+gulp.task("bootstrap-datepicker", () => {
+    gulp.src(['node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.it.min.js'])
+        .pipe(gulp.dest("Content/plugins/bootstrap-datepicker/js"));
+
+    gulp.src(['node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'])
+        .pipe(gulp.dest("Content/plugins/bootstrap-datepicker/css"));
 });
 
 // DataTables

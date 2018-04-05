@@ -35,7 +35,7 @@ namespace WeCode.Web.Api
                     .With(c => c.LastName = Faker.Name.Last())
                     .With(c => c.Email = Faker.Internet.Email())
                     .With(c => c.Phone = Faker.Phone.Number())
-                    .With(c => c.Birthday = new DateTime(Faker.RandomNumber.Next(1960, 2000), Faker.RandomNumber.Next(1, 12), Faker.RandomNumber.Next(1, 28)))
+                    .With(c => c.Birthday = new DateTime(Faker.RandomNumber.Next(1960, 2000), Faker.RandomNumber.Next(1, 12), Faker.RandomNumber.Next(1, 28)).ToString("dd/MM/yyyy"))
                 .Build();
             }
 
@@ -64,6 +64,7 @@ namespace WeCode.Web.Api
                 selectedDev.FirstName = dev.FirstName;
                 selectedDev.LastName = dev.LastName;
                 selectedDev.Category = dev.Category;
+                selectedDev.Birthday = dev.Birthday;
             }
 
             return Ok();

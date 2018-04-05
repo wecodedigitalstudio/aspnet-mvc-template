@@ -14,5 +14,11 @@ namespace WeCode.Web.Controllers
             return View();
         }
 
+        // GET: Datepicker
+        public ActionResult Datepicker()
+        {
+            return View();
+        }
+
     }
 }

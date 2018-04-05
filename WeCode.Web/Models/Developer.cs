@@ -13,6 +13,7 @@ namespace WeCode.Web.Models
         public string Category { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public DateTime Birthday { get; set; }
+        public string Birthday { get; set; }
+
     }
 }
