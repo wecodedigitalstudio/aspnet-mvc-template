@@ -13,11 +13,9 @@ function DevsDetails(id) {
         el: '#dev-details',
         data: {
             title: 'Devs',
-            id: id,
-            firstName: '',
-            lastName: '',
-            birthday: '',
-            category: '',
+            dev: {
+                Id: id
+            },
             config: {
                 format: 'DD/MM/YYYY',
                 useCurrent: false,
@@ -31,13 +29,7 @@ function DevsDetails(id) {
                 $.ajax({
                     type: "POST",
                     url: apiUrl + "devs/save",
-                    data: {
-                        Id: app.id,
-                        FirstName: app.firstName,
-                        LastName: app.lastName,
-                        Birthday: app.birthday,
-                        Category: app.category
-                    },
+                    data: app.dev,
                     success: function () {
                         alert("L'utente è stato salvato correttamente!");
                     }
@@ -53,12 +45,9 @@ function DevsDetails(id) {
         app.categories = result;
 
         // devs/details
-        $.getJSON(apiUrl + 'devs/details', { id: app.id }, function (result) {
+        $.getJSON(apiUrl + 'devs/details', { id: app.dev.Id }, function (result) {
             if (result) {
-                app.firstName = result.FirstName;
-                app.lastName = result.LastName;
-                app.birthday = result.Birthday;
-                app.category = result.Category;
+                app.dev = result;
             }
         });
 

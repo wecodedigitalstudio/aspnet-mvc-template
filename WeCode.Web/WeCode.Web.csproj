@@ -190,7 +190,6 @@
     <Content Include="Content\plugins\select2\css\select2.min.css" />
     <Content Include="Content\plugins\select2\it.js" />
     <Content Include="Content\plugins\select2\select2.full.min.js" />
-    <Content Include="Content\plugins\vue-select\vue-select.js" />
     <Content Include="Content\plugins\vue\vue.js" />
     <Content Include="Content\plugins\vue\vue.min.js" />
     <Content Include="favicon.ico" />

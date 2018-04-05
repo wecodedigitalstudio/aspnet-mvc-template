@@ -8,12 +8,12 @@
     <div class="row pb-3">
         <label class="col-md-2">First name</label>
         <div class="col-md-4">
-            <input type="text" class="form-control" v-model="firstName" />
+            <input type="text" class="form-control" v-model="dev.FirstName" />
         </div>
 
         <label class="col-md-2">Last name</label>
         <div class="col-md-4">
-            <input type="text" class="form-control" v-model="lastName" />
+            <input type="text" class="form-control" v-model="dev.LastName" />
         </div>
     </div>
 
@@ -22,14 +22,14 @@
         <label class="col-md-2">Category</label>
         <div class="col-md-4">
             <select2 :placeholder="'Select category'"
-                     :options="categories" :value.sync="category"
+                     :options="categories" :value.sync="dev.Category"
                      :value-field="'Code'" :text-field="'Description'" />
 
         </div>
 
         <label class="col-md-2">Birthday</label>
         <div class="col-md-4">
-            <date-picker class="form-control" v-model="birthday" :config="config" placeholder="DD/MM/YYYY"></date-picker>
+            <date-picker class="form-control" v-model="dev.Birthday" :config="config" placeholder="DD/MM/YYYY"></date-picker>
         </div>
     </div>
 
