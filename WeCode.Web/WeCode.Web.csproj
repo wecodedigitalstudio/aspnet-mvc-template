@@ -157,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\CategoriesController.cs" />
+    <Compile Include="Api\CountriesController.cs" />
     <Compile Include="Api\DevsController.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -168,6 +169,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\DataTablesResult.cs" />
     <Compile Include="Models\Developer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
