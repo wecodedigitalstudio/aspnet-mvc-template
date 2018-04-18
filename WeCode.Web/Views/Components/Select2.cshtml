@@ -28,43 +28,7 @@
 </div>
 
 
+<script type="application/javascript" src="~/build/select2_page.js"></script>
 
-<script>
 
-    jQuery(document).ready(function () {
-
-        var app = new Vue({
-            el: '#select2-demo',
-            data: {
-                selectedCategory: '',                
-                categories: [],
-
-                selectedCountry: '4'
-            },
-            methods: {
-                onCategoryChanged: function (newValue) {
-                    console.log("new selected category", this.selectedCategory);
-                },
-                onCountryChanged: function (newValue) {
-                    console.log("new selected country", this.selectedCountry);
-                },
-                onContentLoaded: function () {
-                    console.log("categories loaed");
-                }
-            }
-        })
-
-        // categories
-        $.getJSON(apiUrl + 'categories', function (result) {
-            app.categories = result;
-
-            app.$refs.childComponent.$on('content-loaded', function () {
-                app.selectedCategory = result[2].Code;
-            });
-
-        });
-
-    });
-
-</script>
 

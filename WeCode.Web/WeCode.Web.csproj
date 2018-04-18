@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props" Condition="Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props')" />
   <Import Project="..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props" Condition="Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
@@ -175,8 +174,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="build\home.js" />
-    <Content Include="Content\js\bundle.min.js" />
+    <Content Include="build\datepicker_page.js" />
+    <Content Include="build\devs_details_page.js" />
+    <Content Include="build\devs_index_page.js" />
+    <Content Include="build\home_page.js" />
+    <Content Include="build\select2_page.js" />
     <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.it.min.js" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
@@ -192,15 +194,16 @@
     <Content Include="Content\plugins\select2\css\select2.min.css" />
     <Content Include="Content\plugins\select2\it.js" />
     <Content Include="Content\plugins\select2\select2.full.min.js" />
-    <Content Include="Content\plugins\vue\vue.js" />
-    <Content Include="Content\plugins\vue\vue.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="src\app.js" />
-    <Content Include="src\home.js" />
+    <Content Include="src\pages\components\select2.page.js" />
+    <Content Include="src\pages\devs\index.page.js" />
+    <Content Include="src\pages\home.page.js" />
+    <Content Include="src\pages\components\datepicker.page.js" />
+    <Content Include="src\pages\devs\details.page.js" />
     <Content Include="webpack.config.js" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
@@ -214,11 +217,6 @@
       <DependentUpon>custom.css</DependentUpon>
     </Content>
     <Content Include="gulpfile.js" />
-    <Content Include="Scripts\common\datatables.js" />
-    <Content Include="Scripts\components\datepicker.component.js" />
-    <Content Include="Scripts\components\select2.component.js" />
-    <Content Include="Scripts\Devs\details.js" />
-    <Content Include="Scripts\Devs\index.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -237,14 +235,17 @@
     <Content Include="Views\Devs\Index.cshtml" />
     <Content Include="Views\Shared\_Waiter.cshtml" />
     <Content Include="Views\Devs\Details.cshtml" />
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\we-code-template - Web Deploy.pubxml">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Components\Select2.cshtml" />
     <Content Include="Views\Components\Datepicker.cshtml" />
-    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
-    <Content Include="src\app.vue" />
+    <Content Include="src\components\home.vue" />
+    <Content Include="src\components\common\datepicker.vue" />
+    <Content Include="src\components\common\select2.vue" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -288,11 +289,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props'))" />
     <Error Condition="!Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets'))" />
-    <Error Condition="!Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props'))" />
-    <Error Condition="!Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets'))" />
   </Target>
   <Import Project="..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets" Condition="Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets')" />
-  <Import Project="..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets" Condition="Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

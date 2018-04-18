@@ -21,7 +21,7 @@
     <div class="row">
         <label class="col-md-2">Category</label>
         <div class="col-md-4">
-            <select2 :placeholder="'Select category'"
+            <select2 class="form-control" :placeholder="'Select category'"
                      :options="categories" :value.sync="dev.Category"
                      :value-field="'Code'" :text-field="'Description'" />
 
@@ -40,14 +40,11 @@
         </div>
     </div>
 
+    <input hidden id="request-id" value="@Request["id"]" />
+
 </div>
 
+<script type="application/javascript" src="~/build/devs_details_page.js"></script>
 
-<script>
-    jQuery(document).ready(function () {
-        var devsDetails = new DevsDetails(@Request["id"]);
-
-    });
-</script>
 
 

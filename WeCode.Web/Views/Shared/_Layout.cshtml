@@ -11,6 +11,10 @@
     <script src="~/Content/plugins/bootstrap/bootstrap.min.js"></script>
 
     <title>We-Code Template</title>
+
+    <script>
+        var apiUrl = '@string.Format("{0}://{1}:{2}/api/", Request.Url.Scheme, Request.Url.Host, @System.Configuration.ConfigurationManager.AppSettings["apiUrlPort"])';
+    </script>
 </head>
 <body>
 
@@ -23,8 +27,6 @@
     <main role="main" class="container" style="margin-top: 150px">
         @RenderBody()
     </main>
-
-
 
 </body>
 </html>

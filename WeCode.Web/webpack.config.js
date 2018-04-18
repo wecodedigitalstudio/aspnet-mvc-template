@@ -29,7 +29,11 @@ if (env === 'production') {
 // Main webpack config
 module.exports = {
 	entry: {
-        home: './src/home.js'
+        home_page: './src/pages/home.page.js',
+        datepicker_page: './src/pages/components/datepicker.page.js',
+        select2_page: './src/pages/components/select2.page.js',
+        devs_index_page: './src/pages/devs/index.page.js',
+        devs_details_page: './src/pages/devs/details.page.js',
 	},
 	output: {
 		path: outputPath,
@@ -56,5 +60,13 @@ module.exports = {
 			'vue$': 'vue/dist/vue.esm.js'  // Resolving the vue var for standalone build
 		}
 	},
-	plugins // set the previously defined plugins
+    plugins: [
+        new webpack.ProvidePlugin({
+            Vue: ['vue/dist/vue.esm.js', 'default'],
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            $: 'jquery',
+            moment: 'moment',
+        }),
+    ] 
 };
