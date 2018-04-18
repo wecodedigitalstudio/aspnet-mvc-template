@@ -1,4 +1,6 @@
 ﻿
+// https://www.npmjs.com/package/vuejs-datatable
+
 function DevsIndex() {
 
     $('#devs-table').DataTable({
