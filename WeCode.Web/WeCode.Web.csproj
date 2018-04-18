@@ -175,6 +175,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="build\home.js" />
     <Content Include="Content\js\bundle.min.js" />
     <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.it.min.js" />
@@ -198,6 +199,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="src\app.js" />
+    <Content Include="src\home.js" />
+    <Content Include="webpack.config.js" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -234,9 +238,13 @@
     <Content Include="Views\Shared\_Waiter.cshtml" />
     <Content Include="Views\Devs\Details.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <None Include="Properties\PublishProfiles\we-code-template - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\we-code-template - Web Deploy.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Views\Components\Select2.cshtml" />
     <Content Include="Views\Components\Datepicker.cshtml" />
+    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="src\app.vue" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
