@@ -2,6 +2,7 @@ import { DevsService } from '../../services/devs.service';
 var DevsIndexPage = /** @class */ (function () {
     function DevsIndexPage() {
         var _this = this;
+        this.devs = [];
         console.log("Devs index");
         var devsService = new DevsService();
         devsService.getDevs()

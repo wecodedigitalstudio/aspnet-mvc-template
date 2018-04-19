@@ -3,7 +3,7 @@ import { Developer } from '../../models/developer.model';
 
 export class DevsIndexPage {
 
-    private devs: Developer[];
+    private devs: Developer[] = [];
 
     constructor() {
 

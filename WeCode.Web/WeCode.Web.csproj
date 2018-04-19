@@ -201,6 +201,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="src\components\hello.js" />
     <Content Include="src\models\developer.model.js" />
     <Content Include="src\pages\components\select2.page.js" />
     <Content Include="src\pages\devs\index.page.js" />
@@ -255,6 +256,7 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\components\hello.ts" />
     <TypeScriptCompile Include="src\models\developer.model.ts" />
     <TypeScriptCompile Include="src\pages\devs\index.page.ts" />
     <TypeScriptCompile Include="src\pages\home.page.ts" />

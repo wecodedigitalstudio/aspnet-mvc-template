@@ -1,0 +1,11 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+        "packages/**/*.js": { "when": "$(basename).ts" },
+        "packages/**/*.js.map": { "when": "$(basename)" },
+        "packages/**/*.css": { "when": "$(basename).scss" },
+        "packages/**/*.css.map": { "when": "$(basename)" },
+        "src/**/*.js": { "when": "$(basename).ts" },
+        "src/**/*.js.map": { "when": "$(basename)" }
+    },
+}
