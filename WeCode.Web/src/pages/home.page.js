@@ -1,8 +1,8 @@
-﻿import Vue from 'vue';
-import Home from '../components/home.vue';
-
-new Vue({
-    el: '#page-home',
-    components: { Home }
-});
-
+var HomePage = /** @class */ (function () {
+    function HomePage() {
+        console.log("Home");
+    }
+    return HomePage;
+}());
+export { HomePage };
+var home = new HomePage();

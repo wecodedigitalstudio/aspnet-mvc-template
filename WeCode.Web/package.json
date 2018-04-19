@@ -8,6 +8,7 @@
     "build-prod": "webpack"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
     "bootstrap-datepicker": "1.8.0",
     "datatables.net": "1.10.16",
