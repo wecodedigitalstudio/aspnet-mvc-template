@@ -1,28 +1,27 @@
 ﻿
 import Vue from "vue";
-import HelloComponent from "../components/hello";
-import PippoComponent from "../components/hello2.vue";
+import HomeComponent from "../components/home.vue";
+
+// https://github.com/Microsoft/TypeScript-Vue-Starter
 
 export class HomePage {
 
 
     constructor() {
 
-        console.log("Home");
+        console.log("Home page");
 
         let v = new Vue({
             el: "#page-home",
             template: `
             <div>
                 Name: <input v-model="name" type="text">
-                <hello-component :name="name" :initialEnthusiasm="5" />
-                <pippo-component :name="name" :initialEnthusiasm="5" />
+                <home-component :name="name" :initialEnthusiasm="5" />
             </div>
             `,
-            data: { name: "World" },
+            data: { name: "We-Code" },
             components: {
-                HelloComponent,
-                PippoComponent
+                HomeComponent
             }
         });
 
