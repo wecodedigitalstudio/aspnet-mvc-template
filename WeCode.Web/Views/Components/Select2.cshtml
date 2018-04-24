@@ -4,12 +4,13 @@
     
     <div class="col-6">
 
-        <select2 class="form-control" ref="childComponent"
+        @*<select2 class="form-control" ref="childComponent"
                  :disabled="false" :placeholder="'select a category'"
                  :options="categories" :value.sync="selectedCategory"
                  :value-field="'Code'" :text-field="'Description'"
                  v-on:value-changed="onCategoryChanged"
-                 v-on:content-loaded="onContentLoaded" />
+                 v-on:content-loaded="onContentLoaded" />*@
+        <select3 :options="categories" :value.sync="selectedCategory" ></select3>
 
     </div>
 

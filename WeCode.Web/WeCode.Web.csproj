@@ -202,11 +202,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="src\models\developer.model.js" />
+    <Content Include="src\pages\components\datepicker.page.js" />
     <Content Include="src\pages\components\select2.page.js" />
     <Content Include="src\pages\devs\index.page.js" />
     <Content Include="src\pages\devs\_index.page.js" />
     <Content Include="src\pages\home.page.js" />
-    <Content Include="src\pages\components\datepicker.page.js" />
+    <Content Include="src\pages\components\_datepicker.page.js" />
     <Content Include="src\pages\devs\details.page.js" />
     <Content Include="src\services\devs.service.js" />
     <Content Include="webpack.config.js" />
@@ -250,11 +251,12 @@
     <Content Include="Views\Components\Datepicker.cshtml" />
     <Content Include="src\components\home.vue" />
     <Content Include="src\components\common\datepicker.vue" />
-    <Content Include="src\components\common\select2.vue" />
+    <Content Include="src\components\common\select3.vue" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\models\developer.model.ts" />
+    <TypeScriptCompile Include="src\pages\components\datepicker.page.ts" />
     <TypeScriptCompile Include="src\pages\components\select2.page.ts" />
     <TypeScriptCompile Include="src\pages\devs\index.page.ts" />
     <TypeScriptCompile Include="src\pages\home.page.ts" />

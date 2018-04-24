@@ -1,10 +1,10 @@
 ﻿import Vue from 'vue';
-import Select2 from '../../components/common/select2.vue';
+//import Select2 from '../../components/common/select2.vue';
 import Datepicker from '../../components/common/datepicker.vue';
 
 var app = new Vue({
     el: '#dev-details',
-    components: { Datepicker, Select2 },
+    //components: { Datepicker, Select2 },
     data: {
         title: 'Devs',
         dev: {

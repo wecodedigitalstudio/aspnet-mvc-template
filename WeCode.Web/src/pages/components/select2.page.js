@@ -1,11 +1,11 @@
 import Vue from "vue";
-import Select2 from "../../components/common/select2.vue";
+import Select3 from "../../components/common/select3.vue";
 var Select2Page = /** @class */ (function () {
     function Select2Page() {
         console.log("Select2 page");
         var v = new Vue({
             el: "#select2-demo",
-            components: { Select2: Select2 },
+            components: { Select3: Select3 },
             data: {
                 selectedCategory: 'aa',
                 categories: [],
