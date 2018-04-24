@@ -1,25 +1,25 @@
 ﻿
 
-<div class="row" id="select2-demo" >
-    
+<div class="row" id="select2-demo">
+
     <div class="col-6">
 
-        @*<select2 class="form-control" ref="childComponent"
-                 :disabled="false" :placeholder="'select a category'"
-                 :options="categories" :value.sync="selectedCategory"
-                 :value-field="'Code'" :text-field="'Description'"
-                 v-on:value-changed="onCategoryChanged"
-                 v-on:content-loaded="onContentLoaded" />*@
-        <select3 :options="categories" :value.sync="selectedCategory" ></select3>
+        <select2 class="form-control" ref="childComponent"
+            :disabled="false" :placeholder="'select a category'"
+            :options="categories" :value.sync="selectedCategory"
+            :value-field="'Code'" :text-field="'Description'"
+            v-on:value-changed="onCategoryChanged"
+            v-on:content-loaded="onContentLoaded" />
+        
 
     </div>
 
     <div class="col-6">
 
-        @*<select2 class="form-control" :disabled="false" :placeholder="'select a country'"
-                 :url="'http://localhost:50510/api/Countries'" :value.sync="selectedCountry" :text="'arcadia'"
-                 :value-field="'Code'" :text-field="'Description'"
-                 v-on:value-changed="onCountryChanged" />*@
+        <select2 class="form-control" :disabled="false" :placeholder="'select a country'"
+            :url="'http://localhost:50510/api/Countries'" :value.sync="selectedCountry" :text="'arcadia'"
+            :value-field="'Code'" :text-field="'Description'"
+            v-on:value-changed="onCountryChanged" />
 
     </div>
 
@@ -28,6 +28,7 @@
 
 </div>
 
+<script src="~/Content/plugins/select2/select2.full.min.js"></script>
 
 <script type="application/javascript" src="~/build/select2_page.js"></script>
 

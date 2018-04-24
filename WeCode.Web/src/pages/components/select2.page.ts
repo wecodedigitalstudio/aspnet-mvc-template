@@ -1,5 +1,5 @@
 ﻿import Vue from "vue";
-import Select3 from "../../components/common/select3.vue";
+import Select2 from "../../components/common/select2.vue";
 
 export class Select2Page {
 
@@ -10,7 +10,7 @@ export class Select2Page {
 
         let v = new Vue({
             el: "#select2-demo",
-            components: { Select3 },
+            components: { Select2 },
             data: {
                 selectedCategory: 'aa',
                 categories: [],
