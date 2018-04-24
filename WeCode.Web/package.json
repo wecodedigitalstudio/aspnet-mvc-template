@@ -8,6 +8,7 @@
     "build-prod": "webpack"
   },
   "dependencies": {
+    "@types/select2": "^4.0.44",
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
     "bootstrap-datepicker": "1.8.0",
@@ -18,7 +19,7 @@
     "gulp-uglify": "3.0.0",
     "jquery": "^3.3.1",
     "moment": "^2.21.0",
-    "select2": "4.0.6-rc.1",
+    "select2": "^4.0.6-rc.1",
     "typescript": "^2.8.1",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.2",
