@@ -15,6 +15,14 @@ var DevsIndexPage = /** @class */ (function () {
             console.log("error", e);
         });
     }
+    DevsIndexPage.prototype.mounted = function () {
+        this.loadDevs();
+    };
+    DevsIndexPage.prototype.loadDevs = function () {
+        this.DevsService.getDevs()
+            .then(function (response) {
+        });
+    };
     return DevsIndexPage;
 }());
 export { DevsIndexPage };

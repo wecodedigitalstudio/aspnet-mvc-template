@@ -1,19 +1,34 @@
 ﻿
 <h1 class="mt-5">Devs</h1>
 
-<table class="table table-striped" id="devs-table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Category</th>
-            <th>Birthday</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table>
+<div id="index-devs-page">
+
+    <table class="table table-striped" id="devs-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Category</th>
+                <th>Birthday</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="dev in devs">
+                <td><span>{{dev.Id}}</span></td>
+                <td><span>{{dev.FirstName}}</span></td>
+                <td><span>{{dev.LastName}}</span></td>
+                <td><span>{{dev.Category}}</span></td>
+                <td><span>{{dev.Birthday}}</span></td>
+                <td><span>Modifica</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
 
 @*<link rel="stylesheet" href="~/Content/plugins/datatables/css/jquery.dataTables.css" />
 <script src="~/Content/plugins/datatables/jquery.dataTables.js"></script>*@

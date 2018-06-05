@@ -1,22 +1,20 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-import Vue from 'vue';
-var DevsEditPage = /** @class */ (function (_super) {
-    __extends(DevsEditPage, _super);
-    function DevsEditPage() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return DevsEditPage;
-}(Vue));
-export default DevsEditPage;
+﻿import Vue from 'vue';
+
+import Component from "vue-class-component";
+import { Prop, Watch, Emit } from "vue-property-decorator";
+
+import Select2 from '../../components/common/select2.vue';
+import Datepicker from '../../components/common/datepicker.vue';
+import Waiter from '../../components/common/waiter.vue';
+
+import { Developer } from '../../models/developer.model';
+
+import { DevsService } from '../../services/devs.service';
+
+export default class DevsEditPage extends Vue {
+    
+}
+
 //var app = new Vue({
 //    el: '#dev-details',
 //    //components: { Datepicker, Select2 },
@@ -40,15 +38,21 @@ export default DevsEditPage;
 //        }
 //    }
 //})
+
 //Vue.config.devtools = true;
+
 //// categories 
 //$.getJSON(apiUrl + 'categories', function (result) {
 //    app.categories = result;
+
 //    // devs/details
 //    $.getJSON(apiUrl + 'devs/details', { id: app.dev.Id }, function (result) {
 //        if (result) {
 //            app.dev = result;
 //        }
 //    });
+
 //});
+
+
 Vue.config.devtools = true;

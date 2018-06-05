@@ -1,4 +1,7 @@
-﻿import { DevsService } from '../../services/devs.service';
+﻿import Vue from "vue";
+import Component from "vue-class-component";
+import { Prop, Watch, Emit } from "vue-property-decorator";
+import { DevsService } from '../../services/devs.service';
 import { Developer } from '../../models/developer.model';
 
 export class DevsIndexPage {
@@ -22,6 +25,18 @@ export class DevsIndexPage {
                 console.log("error", e);
             });
 
+    }
+
+    public mounted() {
+        this.loadDevs()
+    }
+
+    private loadDevs() {
+        this.DevsService.getDevs()
+            .then(response => {
+                
+            })
+        
     }
 
 }
