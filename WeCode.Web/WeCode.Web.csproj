@@ -253,7 +253,6 @@
     <TypeScriptCompile Include="src\models\developer.model.ts" />
     <TypeScriptCompile Include="src\pages\components\datepicker.page.ts" />
     <TypeScriptCompile Include="src\pages\components\select2.page.ts" />
-    <TypeScriptCompile Include="src\pages\devs\index.page.ts" />
     <TypeScriptCompile Include="src\pages\home.page.ts" />
     <TypeScriptCompile Include="src\services\devs.service.ts" />
     <TypeScriptCompile Include="src\vue-shims.d.ts" />

@@ -1,29 +1,31 @@
-import { DevsService } from '../../services/devs.service';
-var DevsIndexPage = /** @class */ (function () {
-    function DevsIndexPage() {
-        var _this = this;
-        this.devs = [];
-        console.log("Devs index");
-        var devsService = new DevsService();
-        devsService.getDevs()
-            .then(function (response) {
-            _this.devs = response.data;
-            console.log("devs", _this.devs);
-            console.log("count", _this.devs.length);
-        })
-            .catch(function (e) {
-            console.log("error", e);
-        });
-    }
-    DevsIndexPage.prototype.mounted = function () {
-        this.loadDevs();
-    };
-    DevsIndexPage.prototype.loadDevs = function () {
-        this.DevsService.getDevs()
-            .then(function (response) {
-        });
-    };
-    return DevsIndexPage;
-}());
-export { DevsIndexPage };
-var devsIndex = new DevsIndexPage();
+
+function DevsIndex() {
+
+    $('#devs-table').DataTable({
+        processing: true,
+        serverSide: true,
+        paging: true,
+        lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
+        pageLength: 10,
+        ajax: {
+            type: "GET",
+            url: "api/devs/Search"
+        },
+        columns: [
+            { "data": "Id" },
+            { "data": "FirstName" },
+            { "data": "LastName" },
+            { "data": "Category" },
+            { "data": "Birthday" },
+            {
+                "data": null,
+                "render": function (data, type, row) {
+                    return '<a class="edit" href="/devs/details?id=' + row.Id + '" >Details</a>';
+                }
+            }
+        ]
+
+    });
+
+}
+
