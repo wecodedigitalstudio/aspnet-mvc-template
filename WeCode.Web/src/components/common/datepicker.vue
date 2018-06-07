@@ -34,8 +34,8 @@
 
         }
     }
-</script>
 
+</script>
 
 <style lang="css">
     @import '/Content/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css';

@@ -4,17 +4,13 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                    </button>
                     <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
                 </div>
                 <div class="modal-body">
                     {{message}}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default cancel" data-dismiss="modal">No</button>
-                    <button type="submit" v-on:click="$emit('confirmed')" class="btn btn-primary" data-dismiss="modal">Si</button>
+                    <button type="button" v-on:click="$emit('ok')" class="btn btn-default ok" data-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
@@ -25,11 +21,11 @@
 <script lang="ts">
 
     import Vue from "vue";
-    import Component from "vue-class-component";
-    import { Prop, Watch, Emit } from "vue-property-decorator";
+    import Component from "vue-class-component"
+    import { Prop, Watch, Emit } from "vue-property-decorator"
 
     @Component
-    export default class ConfirmDialog extends Vue {
+    export default class NotificationDialog extends Vue {
 
         @Prop()
         public title: string = "";
@@ -38,14 +34,12 @@
         public message: string = "";
 
         mounted() {
-            let cd = this;
+            let nd = this;
             document.addEventListener("keyup", function (e: any) {
 
-                if ($(cd.$el).hasClass('in')) {
-                    if (e.keyCode === 27) {
-                        cd.close();
-                    } else if (e.keyCode === 13) {
-                        cd.$emit('confirmed');
+                if ($(nd.$el).hasClass('in')) {
+                    if (e.keyCode === 27 || e.keyCode === 13) {
+                        nd.$emit('ok');
                     }
                 }
 
