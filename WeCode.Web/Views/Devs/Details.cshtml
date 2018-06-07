@@ -1,7 +1,7 @@
-﻿<!-- Pannello modale del caricamento -->
-<waiter ref="waiter"></waiter>
+﻿<div id="dev-details" class="container-fluid">
 
-<div id="dev-details" class="container-fluid">
+    <!-- Pannello modale del caricamento -->
+    <waiter ref="waiter"></waiter>
 
     <input hidden id="id" value="@Request["id"]" />
 
@@ -41,7 +41,7 @@
     <!-- Buttons -->
     <div class="row pt-3">
         <div class="col-md-12 text-right">
-            <button v-on:click="onSave()" class="btn btn-primary">Save</button>
+            <button v-on:click="onSave()" class="btn btn-primary">Save</button>           
         </div>
     </div>
 

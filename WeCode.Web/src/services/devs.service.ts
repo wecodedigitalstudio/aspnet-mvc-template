@@ -17,7 +17,6 @@ export class DevsService {
     }
 
     public update(dev: Developer): AxiosPromise<Developer> {
-        console.log(dev);
         return axios.post('/api/devs/save', dev);
     }
 

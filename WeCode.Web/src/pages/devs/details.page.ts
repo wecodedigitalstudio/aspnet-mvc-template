@@ -76,11 +76,29 @@ export default class DevsEditPage extends Vue {
     // update details dev
     public onSave() {
         this.$refs.waiter.open();
+        this.devsService.update(this.dev)
+            .then(response => {
 
-        this.devsService.update(this.dev);
+                console.log("response");
 
+                this.closeWaiter();
+
+                //if (response.data != undefined) {
+                //    // TOSO: msg di validazione
+                //    this.$refs.waiter.close();
+                //} else {
+                //    // save OK !!
+                //    this.dev = response.data;
+                //    this.$refs.waiter.close();
+                //}
+            });
+
+        //setInterval(() => this.$refs.waiter.close(), 1000);
+
+    }
+
+    private closeWaiter() {
         this.$refs.waiter.close();
-            
     }
 }
 

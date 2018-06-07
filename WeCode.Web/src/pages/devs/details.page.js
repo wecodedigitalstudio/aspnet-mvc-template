@@ -63,8 +63,24 @@ var DevsEditPage = /** @class */ (function (_super) {
     };
     // update details dev
     DevsEditPage.prototype.onSave = function () {
+        var _this = this;
         this.$refs.waiter.open();
-        this.devsService.update(this.dev);
+        this.devsService.update(this.dev)
+            .then(function (response) {
+            console.log("response");
+            _this.closeWaiter();
+            //if (response.data != undefined) {
+            //    // TOSO: msg di validazione
+            //    this.$refs.waiter.close();
+            //} else {
+            //    // save OK !!
+            //    this.dev = response.data;
+            //    this.$refs.waiter.close();
+            //}
+        });
+        //setInterval(() => this.$refs.waiter.close(), 1000);
+    };
+    DevsEditPage.prototype.closeWaiter = function () {
         this.$refs.waiter.close();
     };
     DevsEditPage = __decorate([
