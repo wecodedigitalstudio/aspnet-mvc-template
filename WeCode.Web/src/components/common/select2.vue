@@ -171,7 +171,7 @@
 </script>
 
 <style>
-    @import '/Content/plugins/select2_v4/select2.min.css';
+    @import '/Content/plugins/select2/css/select2.min.css';
 
     .select2-container {
         width: 100%;

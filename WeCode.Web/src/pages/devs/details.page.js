@@ -19,26 +19,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import Vue from 'vue';
 import Component from "vue-class-component";
-//import Select2 from '../../components/common/select2.vue';
-//import Datepicker from '../../components/common/datepicker.vue';
-//import { Developer } from '../../models/developer.model';
-//import { DevsService } from '../../services/devs.service';
+import Select2 from '../../components/common/select2.vue';
+import Datepicker from '../../components/common/datepicker.vue';
+import Waiter from '../../components/common/waiter.vue';
+import { Developer } from '../../models/developer.model';
+import { DevsService } from '../../services/devs.service';
+import { DropdownItem } from "../../models/dropdown.model";
 var DevsEditPage = /** @class */ (function (_super) {
     __extends(DevsEditPage, _super);
     function DevsEditPage() {
         var _this = _super.call(this) || this;
-        console.log("2");
-        //this.devsService = new DevsService();
-        //this.dev = new Developer;
-        _this.title = "arcadia!!!";
+        _this.optionSkills = [];
+        _this.id = $('#id').val();
+        _this.devsService = new DevsService();
+        _this.dev = new Developer;
+        _this.title = "";
         return _this;
     }
+    DevsEditPage.prototype.mounted = function () {
+        var _this = this;
+        this.loadDev(id, function (dev) {
+            _this.optionSkills = _this.getDevSkills();
+            _this.title = _this.dev.FirstName + " " + _this.dev.LastName;
+        });
+    };
+    // load dev
+    DevsEditPage.prototype.loadDev = function (id, done) {
+        var _this = this;
+        this.devsService.getDetails(id)
+            .then(function (response) {
+            _this.dev = response.data;
+            done(_this.dev);
+        });
+    };
+    // load skills devs
+    DevsEditPage.prototype.getDevSkills = function () {
+        var skillsOption = [];
+        skillsOption.push(new DropdownItem("BackEnd", "Back-End"));
+        skillsOption.push(new DropdownItem("FrontEnd", "Front-End"));
+        skillsOption.push(new DropdownItem("FullStack", "Full-Stack"));
+        return skillsOption;
+    };
+    DevsEditPage.prototype.onSave = function () {
+        console.log("ciao");
+        this.devsService.update(this.dev);
+    };
     DevsEditPage = __decorate([
         Component({
             el: '#dev-details',
             components: {
-            //Select2,
-            //Datepicker,
+                Select2: Select2,
+                Datepicker: Datepicker,
+                Waiter: Waiter
             }
         }),
         __metadata("design:paramtypes", [])
@@ -46,40 +78,5 @@ var DevsEditPage = /** @class */ (function (_super) {
     return DevsEditPage;
 }(Vue));
 export default DevsEditPage;
-//var app = new Vue({
-//    el: '#dev-details',
-//    //components: { Datepicker, Select2 },
-//    data: {
-//        title: 'Devs',
-//        dev: {
-//            Id: $('#request-id').val()
-//        },
-//        categories: []
-//    },
-//    methods: {
-//        save: function () {
-//            $.ajax({
-//                type: "POST",
-//                url: apiUrl + "devs/save",
-//                data: app.dev,
-//                success: function () {
-//                    alert("L'utente è stato salvato correttamente!");
-//                }
-//            });
-//        }
-//    }
-//})
-//Vue.config.devtools = true;
-//// categories 
-//$.getJSON(apiUrl + 'categories', function (result) {
-//    app.categories = result;
-//    // devs/details
-//    $.getJSON(apiUrl + 'devs/details', { id: app.dev.Id }, function (result) {
-//        if (result) {
-//            app.dev = result;
-//        }
-//    });
-//});
-console.log("1");
 var page = new DevsEditPage();
 Vue.config.devtools = true;

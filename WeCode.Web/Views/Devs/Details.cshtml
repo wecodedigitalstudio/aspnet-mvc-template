@@ -5,7 +5,7 @@
     <h1 class="mt-5">{{title}} details</h1>
 
     <!-- First / Last name -->
-    @*<div class="row pb-3">
+    <div class="row pb-3">
         <label class="col-md-2">First name</label>
         <div class="col-md-4">
             <input type="text" class="form-control" v-model="dev.FirstName" />
@@ -15,29 +15,32 @@
         <div class="col-md-4">
             <input type="text" class="form-control" v-model="dev.LastName" />
         </div>
-    </div>*@
+    </div>
 
     <!-- Category -->
-    @*<div class="row">
+    <div class="row">
         <label class="col-md-2">Category</label>
         <div class="col-md-4">
-            <select2 class="form-control" :placeholder="'Select category'"
-                     :options="categories" :value.sync="dev.Category"
-                     :value-field="'Code'" :text-field="'Description'" />
+            <select2 class="form-control"
+                     :placeholder="'Select category'"
+                     :options="optionSkills"
+                     :value.sync="dev.Category"
+                     :value-field="'Value'"
+                     :text-field="'Text'" />
         </div>
 
         <label class="col-md-2">Birthday</label>
         <div class="col-md-4">
             <datepicker :value.sync="dev.Birthday" />
         </div>
-    </div>*@
+    </div>
 
     <!-- Buttons -->
-    @*<div class="row pt-3">
+    <div class="row pt-3">
         <div class="col-md-12 text-right">
-            <button v-on:click="save" class="btn btn-primary">Save</button>
+            <button v-on:click="onSave()" class="btn btn-primary">Save</button>
         </div>
-    </div>*@
+    </div>
 
 </div>
 
