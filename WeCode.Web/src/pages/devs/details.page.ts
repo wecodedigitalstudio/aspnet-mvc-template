@@ -4,6 +4,7 @@ import { Prop, Watch, Emit } from "vue-property-decorator";
 import Select2 from '../../components/common/select2.vue';
 import Datepicker from '../../components/common/datepicker.vue';
 import Waiter from '../../components/common/waiter.vue';
+import NotificationDialog from "../../components/notificationDialog.vue";
 import { Developer } from '../../models/developer.model';
 import { DevsService } from '../../services/devs.service';
 import { Dropdown, DropdownItem } from "../../models/dropdown.model";
@@ -13,11 +14,16 @@ import { Dropdown, DropdownItem } from "../../models/dropdown.model";
     components: {
         Select2,
         Datepicker,
-        Waiter
+        Waiter,
+        NotificationDialog
     }
 })
 
 export default class DevsEditPage extends Vue {
+
+    $refs: {
+        waiter: Vue,
+    }
 
     public id: number;
     private devsService: DevsService;
