@@ -22,7 +22,7 @@ import Component from "vue-class-component";
 import Select2 from '../../components/common/select2.vue';
 import Datepicker from '../../components/common/datepicker.vue';
 import Waiter from '../../components/common/waiter.vue';
-import NotificationDialog from "../../components/notificationDialog.vue";
+import NotificationDialog from "../../components/common/notificationDialog.vue";
 import { Developer } from '../../models/developer.model';
 import { DevsService } from '../../services/devs.service';
 import { DropdownItem } from "../../models/dropdown.model";
@@ -39,15 +39,16 @@ var DevsEditPage = /** @class */ (function (_super) {
     }
     DevsEditPage.prototype.mounted = function () {
         var _this = this;
-        this.loadDev(id, function (dev) {
+        this.loadDev(function (dev) {
             _this.optionSkills = _this.getDevSkills();
+            console.log("id Number: ", _this.id);
             _this.title = _this.dev.FirstName + " " + _this.dev.LastName;
         });
     };
     // load dev
-    DevsEditPage.prototype.loadDev = function (id, done) {
+    DevsEditPage.prototype.loadDev = function (done) {
         var _this = this;
-        this.devsService.getDetails(id)
+        this.devsService.getDetails(this.id)
             .then(function (response) {
             _this.dev = response.data;
             done(_this.dev);
@@ -61,8 +62,8 @@ var DevsEditPage = /** @class */ (function (_super) {
         skillsOption.push(new DropdownItem("FullStack", "Full-Stack"));
         return skillsOption;
     };
+    // update details dev
     DevsEditPage.prototype.onSave = function () {
-        console.log("ciao");
         this.devsService.update(this.dev);
     };
     DevsEditPage = __decorate([

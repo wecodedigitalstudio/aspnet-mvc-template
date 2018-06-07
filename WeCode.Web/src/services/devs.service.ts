@@ -19,12 +19,11 @@ export class DevsService {
     }
 
     public update(dev: Developer): AxiosPromise<Developer> {
-        return axios.post('/api/devs/save', {
-            body: dev
-        });
+        console.log(dev);
+        return axios.post('/api/devs/save', dev);
     }
 
-    public getDetails(id: number): AxiosPromise<Developer> {
+    public getDetails(id: string): AxiosPromise<Developer> {
         return axios.get('/api/devs/details?id=' + id);
     }
 

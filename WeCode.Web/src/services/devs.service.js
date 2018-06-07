@@ -11,9 +11,8 @@ var DevsService = /** @class */ (function () {
         return axios.get('/api/devs');
     };
     DevsService.prototype.update = function (dev) {
-        return axios.post('/api/devs/save', {
-            body: dev
-        });
+        console.log(dev);
+        return axios.post('/api/devs/save', dev);
     };
     DevsService.prototype.getDetails = function (id) {
         return axios.get('/api/devs/details?id=' + id);

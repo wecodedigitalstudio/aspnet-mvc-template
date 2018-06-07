@@ -1,5 +1,5 @@
 ﻿<template>
-    <input type="text" v-model="value" class="form-control text-center datepicker" />
+    <input type="text" v-model="value" class="form-control datepicker" />
 </template>
 
 <script>
