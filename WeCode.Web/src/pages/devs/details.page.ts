@@ -1,8 +1,6 @@
 ﻿import Vue from 'vue';
-
 import Component from "vue-class-component";
 import { Prop, Watch, Emit } from "vue-property-decorator";
-
 import Select2 from '../../components/common/select2.vue';
 import Datepicker from '../../components/common/datepicker.vue';
 import Waiter from '../../components/common/waiter.vue';
@@ -53,7 +51,6 @@ export default class DevsEditPage extends Vue {
     public mounted() {
         this.loadDev((dev: Developer) => {
             this.optionSkills = this.getDevSkills();
-            console.log("id Number: ", this.id);
             this.title = this.dev.FirstName + " " + this.dev.LastName;
         });
     }

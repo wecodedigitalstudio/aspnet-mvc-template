@@ -41,7 +41,6 @@ var DevsEditPage = /** @class */ (function (_super) {
         var _this = this;
         this.loadDev(function (dev) {
             _this.optionSkills = _this.getDevSkills();
-            console.log("id Number: ", _this.id);
             _this.title = _this.dev.FirstName + " " + _this.dev.LastName;
         });
     };

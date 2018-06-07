@@ -6,9 +6,7 @@ import axios, { AxiosPromise } from 'axios';
 
 export class DevsService {
 
-    constructor() {
-        console.log("Devs service");
-    }
+    constructor() { }
 
     public test(): string {
         return "ok";
