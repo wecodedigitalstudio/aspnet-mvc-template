@@ -21,6 +21,7 @@ import { Dropdown, DropdownItem } from "../../models/dropdown.model";
 
 export default class DevsEditPage extends Vue {
 
+    // reference childComponents
     $refs: {
         waiter: Vue,
         notificationDialog: Vue
