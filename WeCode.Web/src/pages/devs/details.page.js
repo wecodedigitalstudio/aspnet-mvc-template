@@ -19,33 +19,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import Vue from 'vue';
 import Component from "vue-class-component";
-import Select2 from '../../components/common/select2.vue';
-import Datepicker from '../../components/common/datepicker.vue';
-import { Developer } from '../../models/developer.model';
-import { DevsService } from '../../services/devs.service';
+//import Select2 from '../../components/common/select2.vue';
+//import Datepicker from '../../components/common/datepicker.vue';
+//import { Developer } from '../../models/developer.model';
+//import { DevsService } from '../../services/devs.service';
 var DevsEditPage = /** @class */ (function (_super) {
     __extends(DevsEditPage, _super);
     function DevsEditPage() {
         var _this = _super.call(this) || this;
-        _this.devsService = new DevsService();
-        _this.dev = new Developer;
-        _this.title = "";
+        console.log("2");
+        //this.devsService = new DevsService();
+        //this.dev = new Developer;
+        _this.title = "arcadia!!!";
         return _this;
     }
-    DevsEditPage.prototype.onDevSelected = function (id) {
-        var _this = this;
-        this.devsService.getDetails(id)
-            .then(function (response) {
-            _this.dev = response.data;
-        });
-        this.title = this.dev.FirstName + " " + this.dev.LastName;
-    };
     DevsEditPage = __decorate([
         Component({
-            el: '#devs-details',
+            el: '#dev-details',
             components: {
-                Select2: Select2,
-                Datepicker: Datepicker,
+            //Select2,
+            //Datepicker,
             }
         }),
         __metadata("design:paramtypes", [])
@@ -87,5 +80,6 @@ export default DevsEditPage;
 //        }
 //    });
 //});
+console.log("1");
 var page = new DevsEditPage();
 Vue.config.devtools = true;
