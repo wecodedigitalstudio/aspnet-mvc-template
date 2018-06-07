@@ -1,13 +1,18 @@
 ﻿// tsconfig.json
 {
   "compilerOptions": {
-    // this aligns with Vue's browser support
-    "target": "es5",
-    // this enables stricter inference for data properties on `this`
-    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     // if using webpack 2+ or rollup, to leverage tree shaking:
     "module": "es2015",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "target": "es5"
   },
-  "compileOnSave": true
+  "compileOnSave": true,
+  "typeRoots": [
+    "node_modules/@types"
+  ]
 }

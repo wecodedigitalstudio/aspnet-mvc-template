@@ -201,11 +201,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="src\components\common\waiter.vue" />
     <Content Include="src\components\common\confirmDialog.vue" />
     <Content Include="src\components\common\validationDialog.vue" />
     <Content Include="src\components\common\notificationDialog.vue" />
     <TypeScriptCompile Include="src\pages\devs\details.page.ts" />
+    <Content Include="src\pages\devs\index.page.js" />
     <Content Include="webpack.config.js" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

@@ -15,6 +15,9 @@ var DevsService = /** @class */ (function () {
             body: dev
         });
     };
+    DevsService.prototype.getDetails = function (id) {
+        return axios.get('api/devs/details?id=' + id);
+    };
     return DevsService;
 }());
 export { DevsService };

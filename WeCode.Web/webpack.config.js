@@ -7,7 +7,7 @@ module.exports = {
         datepicker_page: './src/pages/components/datepicker.page.js',
         select2_page: './src/pages/components/select2.page.js',
         devs_index_page: './src/pages/devs/index.page.js',
-        //devs_details_page: './src/pages/devs/details.page.js',
+        devs_details_page: './src/pages/devs/details.page.js',
     },
     output: {
         path: path.resolve(__dirname, './build'),

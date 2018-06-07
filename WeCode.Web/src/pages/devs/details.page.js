@@ -8,12 +8,48 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import Vue from 'vue';
+import Component from "vue-class-component";
+import Select2 from '../../components/common/select2.vue';
+import Datepicker from '../../components/common/datepicker.vue';
+import { Developer } from '../../models/developer.model';
+import { DevsService } from '../../services/devs.service';
 var DevsEditPage = /** @class */ (function (_super) {
     __extends(DevsEditPage, _super);
     function DevsEditPage() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this) || this;
+        _this.devsService = new DevsService();
+        _this.dev = new Developer;
+        _this.title = "";
+        return _this;
     }
+    DevsEditPage.prototype.onDevSelected = function (id) {
+        var _this = this;
+        this.devsService.getDetails(id)
+            .then(function (response) {
+            _this.dev = response.data;
+        });
+        this.title = this.dev.FirstName + " " + this.dev.LastName;
+    };
+    DevsEditPage = __decorate([
+        Component({
+            el: '#devs-details',
+            components: {
+                Select2: Select2,
+                Datepicker: Datepicker,
+            }
+        }),
+        __metadata("design:paramtypes", [])
+    ], DevsEditPage);
     return DevsEditPage;
 }(Vue));
 export default DevsEditPage;
@@ -51,4 +87,5 @@ export default DevsEditPage;
 //        }
 //    });
 //});
+var page = new DevsEditPage();
 Vue.config.devtools = true;

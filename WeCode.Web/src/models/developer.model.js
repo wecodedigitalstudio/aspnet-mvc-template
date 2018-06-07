@@ -1,8 +1,12 @@
 var Developer = /** @class */ (function () {
     function Developer() {
-        this.id = 0;
-        this.firstName = "";
-        this.lastName = "";
+        this.Id = 0;
+        this.FirstName = "";
+        this.LastName = "";
+        this.Category = "";
+        this.Email = "";
+        this.Phone = "";
+        this.Brithday = "";
     }
     return Developer;
 }());

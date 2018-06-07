@@ -1,8 +1,8 @@
 ﻿<div id="dev-details" class="container-fluid">
 
-    <h1 class="mt-5">{{title}}</h1>
+    <input hidden id="request-id" value="@Request["id"]" />
 
-    <p>Details</p>
+    <h1 class="mt-5">{{title}} details</h1>
 
     <!-- First / Last name -->
     <div class="row pb-3">
@@ -24,12 +24,11 @@
             <select2 class="form-control" :placeholder="'Select category'"
                      :options="categories" :value.sync="dev.Category"
                      :value-field="'Code'" :text-field="'Description'" />
-
         </div>
 
         <label class="col-md-2">Birthday</label>
         <div class="col-md-4">
-            <datepicker :value.sync="dev.Birthday" />            
+            <datepicker :value.sync="dev.Birthday" />
         </div>
     </div>
 
@@ -39,8 +38,6 @@
             <button v-on:click="save" class="btn btn-primary">Save</button>
         </div>
     </div>
-
-    <input hidden id="request-id" value="@Request["id"]" />
 
 </div>
 

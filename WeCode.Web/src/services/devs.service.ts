@@ -24,6 +24,10 @@ export class DevsService {
         });
     }
 
+    public getDetails(id: number): AxiosPromise<Developer> {
+        return axios.get('api/devs/details?id=' + id);
+    }
+
 }
 
 

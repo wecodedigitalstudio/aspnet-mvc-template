@@ -1,9 +1,9 @@
 ﻿export class Developer {
-
-    public id: number = 0;
-
-    public firstName: string = "";
-
-    public lastName: string = ""; 
-
+    public Id: number = 0;
+    public FirstName: string = "";
+    public LastName: string = "";
+    public Category: string = "";
+    public Email: string = "";
+    public Phone: string = "";
+    public Brithday: string = "";
 }
