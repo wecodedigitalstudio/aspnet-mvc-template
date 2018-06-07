@@ -64,7 +64,9 @@ var DevsEditPage = /** @class */ (function (_super) {
     };
     // update details dev
     DevsEditPage.prototype.onSave = function () {
+        this.$refs.waiter.open();
         this.devsService.update(this.dev);
+        this.$refs.waiter.close();
     };
     DevsEditPage = __decorate([
         Component({

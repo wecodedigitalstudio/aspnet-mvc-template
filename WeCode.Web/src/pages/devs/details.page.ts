@@ -1,6 +1,8 @@
 ﻿import Vue from 'vue';
+
 import Component from "vue-class-component";
 import { Prop, Watch, Emit } from "vue-property-decorator";
+
 import Select2 from '../../components/common/select2.vue';
 import Datepicker from '../../components/common/datepicker.vue';
 import Waiter from '../../components/common/waiter.vue';
@@ -8,6 +10,13 @@ import NotificationDialog from "../../components/common/notificationDialog.vue";
 import { Developer } from '../../models/developer.model';
 import { DevsService } from '../../services/devs.service';
 import { Dropdown, DropdownItem } from "../../models/dropdown.model";
+
+declare module 'vue/types/vue' {
+    interface Vue {
+        open(): void
+        close(): void
+    }
+}
 
 @Component({
     el: '#dev-details',
@@ -69,7 +78,12 @@ export default class DevsEditPage extends Vue {
 
     // update details dev
     public onSave() {
+        this.$refs.waiter.open();
+
         this.devsService.update(this.dev);
+
+        this.$refs.waiter.close();
+            
     }
 }
 
