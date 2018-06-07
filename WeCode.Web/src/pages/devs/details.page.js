@@ -18,13 +18,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import Vue from 'vue';
-import Component from "vue-class-component";
+import Component from 'vue-class-component';
 import Select2 from '../../components/common/select2.vue';
-import Datepicker from '../../components/common/datepicker.vue';
+//import Datepicker from '../../components/common/datepicker.vue';
 import Waiter from '../../components/common/waiter.vue';
 import NotificationDialog from "../../components/common/notificationDialog.vue";
 import { Developer } from '../../models/developer.model';
 import { DevsService } from '../../services/devs.service';
+import { Options } from '../../models/options-dtpicker.model';
 import { DropdownItem } from "../../models/dropdown.model";
 var DevsEditPage = /** @class */ (function (_super) {
     __extends(DevsEditPage, _super);
@@ -35,6 +36,7 @@ var DevsEditPage = /** @class */ (function (_super) {
         _this.devsService = new DevsService();
         _this.dev = new Developer;
         _this.title = "";
+        _this.options = new Options();
         return _this;
     }
     DevsEditPage.prototype.mounted = function () {
@@ -71,9 +73,9 @@ var DevsEditPage = /** @class */ (function (_super) {
             el: '#dev-details',
             components: {
                 Select2: Select2,
-                Datepicker: Datepicker,
+                //      Datepicker,
                 Waiter: Waiter,
-                NotificationDialog: NotificationDialog
+                NotificationDialog: NotificationDialog,
             }
         }),
         __metadata("design:paramtypes", [])

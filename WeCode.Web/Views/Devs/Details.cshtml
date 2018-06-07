@@ -33,7 +33,9 @@
 
         <label class="col-md-2">Birthday</label>
         <div class="col-md-4">
-            <datepicker :value.sync="dev.Birthday" />
+            <date-picker v-model="dev.Birthday" :config="options"></date-picker>
+
+            @*<datepicker :value.sync="dev.Birthday" />*@
         </div>
     </div>
 

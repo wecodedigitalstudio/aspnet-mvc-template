@@ -6,9 +6,7 @@ import axios, { AxiosPromise } from 'axios';
 
 export class DevsService {
 
-    constructor() {
-        console.log("Devs service");
-    }
+    constructor() { }
 
     public test(): string {
         return "ok";
@@ -19,7 +17,6 @@ export class DevsService {
     }
 
     public update(dev: Developer): AxiosPromise<Developer> {
-        console.log(dev);
         return axios.post('/api/devs/save', dev);
     }
 

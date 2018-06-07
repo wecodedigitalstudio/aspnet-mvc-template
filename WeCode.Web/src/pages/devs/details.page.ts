@@ -1,21 +1,25 @@
 ﻿import Vue from 'vue';
-import Component from "vue-class-component";
+import Component from 'vue-class-component';
 import { Prop, Watch, Emit } from "vue-property-decorator";
 import Select2 from '../../components/common/select2.vue';
-import Datepicker from '../../components/common/datepicker.vue';
+//import Datepicker from '../../components/common/datepicker.vue';
 import Waiter from '../../components/common/waiter.vue';
 import NotificationDialog from "../../components/common/notificationDialog.vue";
 import { Developer } from '../../models/developer.model';
 import { DevsService } from '../../services/devs.service';
+import { Options } from '../../models/options-dtpicker.model';
 import { Dropdown, DropdownItem } from "../../models/dropdown.model";
+import datePicker from "vue-bootstrap-datetimepicker";
+
+
 
 @Component({
     el: '#dev-details',
     components: {
         Select2,
-        Datepicker,
+  //      Datepicker,
         Waiter,
-        NotificationDialog
+        NotificationDialog,
     }
 })
 
@@ -32,6 +36,7 @@ export default class DevsEditPage extends Vue {
     public dev: Developer;
     public title: string;
     public optionSkills: DropdownItem[] = [];
+    public options: Options;
 
     constructor() {
         super();
@@ -39,6 +44,7 @@ export default class DevsEditPage extends Vue {
         this.devsService = new DevsService();
         this.dev = new Developer;
         this.title = "";
+        this.options = new Options();
     }
 
     public mounted() {

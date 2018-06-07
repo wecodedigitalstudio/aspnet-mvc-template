@@ -181,9 +181,13 @@
     <Content Include="build\devs_index_page.js" />
     <Content Include="build\home_page.js" />
     <Content Include="build\select2_page.js" />
-    <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.css" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.it.min.js" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Content\plugins\bootstrap-datetimepicker\css\bundle-datetimepicker.css" />
+    <Content Include="Content\plugins\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\plugins\bootstrap-datetimepicker\js\moment-datetimepicker.min.js" />
+    <Content Include="Content\plugins\bootstrap-datetimepicker\js\vue-bootstrap-datetimepicker.min.js" />
     <Content Include="Content\plugins\bootstrap\bootstrap.min.js" />
     <Content Include="Content\plugins\datatables\css\jquery.dataTables.css" />
     <Content Include="Content\plugins\datatables\images\sort_asc.png" />
@@ -206,6 +210,7 @@
     <Content Include="src\components\common\notificationDialog.vue" />
     <Content Include="src\components\common\waiter.vue" />
     <TypeScriptCompile Include="src\models\dropdown.model.ts" />
+    <TypeScriptCompile Include="src\models\options-dtpicker.model.ts" />
     <TypeScriptCompile Include="src\pages\devs\details.page.ts" />
     <Content Include="src\pages\devs\index.page.js" />
     <Content Include="webpack.config.js" />
