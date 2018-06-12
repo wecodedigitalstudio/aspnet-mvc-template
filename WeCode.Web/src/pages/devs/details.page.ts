@@ -84,7 +84,7 @@ export default class DevsEditPage extends Vue {
                 this.closeWaiter();
 
                 //if (response.data != undefined) {
-                //    // TOSO: msg di validazione
+                //    // TODO: msg di validazione
                 //    this.$refs.waiter.close();
                 //} else {
                 //    // save OK !!

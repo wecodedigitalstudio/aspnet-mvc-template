@@ -70,7 +70,7 @@ var DevsEditPage = /** @class */ (function (_super) {
             console.log("response");
             _this.closeWaiter();
             //if (response.data != undefined) {
-            //    // TOSO: msg di validazione
+            //    // TODO: msg di validazione
             //    this.$refs.waiter.close();
             //} else {
             //    // save OK !!
