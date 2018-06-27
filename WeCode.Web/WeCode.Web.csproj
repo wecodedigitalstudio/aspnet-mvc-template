@@ -242,7 +242,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Devs\Index.cshtml" />
-    <Content Include="Views\Shared\_Waiter.cshtml" />
     <Content Include="Views\Devs\Details.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml">
       <SubType>Designer</SubType>
