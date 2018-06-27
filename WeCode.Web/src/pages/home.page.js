@@ -1,6 +1,5 @@
 import Vue from "vue";
 import HomeComponent from "../components/home.vue";
-// https://github.com/Microsoft/TypeScript-Vue-Starter
 var HomePage = /** @class */ (function () {
     function HomePage() {
         console.log("Home page");

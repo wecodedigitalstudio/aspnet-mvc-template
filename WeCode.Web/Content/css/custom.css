@@ -1,5 +1,5 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+﻿@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800);
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,700);
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -27,14 +27,14 @@
   --warning: #DDB967;
   --danger: #953C20;
   --light: #F8F9FA;
-  --dark: #151238;
+  --dark: #4810ef;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: Montserrat;
-  --font-family-monospace: Inconsolata; }
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: Space Mono; }
 
 *,
 *::before,
@@ -57,7 +57,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Montserrat";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -418,7 +418,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Inconsolata"; }
+  font-family: "Space Mono"; }
 
 code {
   font-size: 87.5%;
@@ -1155,13 +1155,13 @@ pre {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #bdbdc7; }
+  background-color: #ccbcfb; }
 
 .table-hover .table-dark:hover {
-  background-color: #afafbb; }
+  background-color: #baa4fa; }
   .table-hover .table-dark:hover > td,
   .table-hover .table-dark:hover > th {
-    background-color: #afafbb; }
+    background-color: #baa4fa; }
 
 .table-active,
 .table-active > th,
@@ -1792,26 +1792,26 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #151238;
-  border-color: #151238; }
+  background-color: #4810ef;
+  border-color: #4810ef; }
   .btn-dark:hover {
     color: #fff;
-    background-color: #0a091b;
-    border-color: #070611; }
+    background-color: #3d0ecb;
+    border-color: #3a0dbf; }
   .btn-dark:focus, .btn-dark.focus {
-    box-shadow: 0 0 0 0.2rem rgba(21, 18, 56, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(72, 16, 239, 0.5); }
   .btn-dark.disabled, .btn-dark:disabled {
     color: #fff;
-    background-color: #151238;
-    border-color: #151238; }
+    background-color: #4810ef;
+    border-color: #4810ef; }
   .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
   .show > .btn-dark.dropdown-toggle {
     color: #fff;
-    background-color: #070611;
-    border-color: #030208; }
+    background-color: #3a0dbf;
+    border-color: #360cb3; }
     .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-dark.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(21, 18, 56, 0.5); }
+      box-shadow: 0 0 0 0.2rem rgba(72, 16, 239, 0.5); }
 
 .btn-outline-primary {
   color: #3C2DC2;
@@ -1975,27 +1975,27 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-outline-dark {
-  color: #151238;
+  color: #4810ef;
   background-color: transparent;
   background-image: none;
-  border-color: #151238; }
+  border-color: #4810ef; }
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #151238;
-    border-color: #151238; }
+    background-color: #4810ef;
+    border-color: #4810ef; }
   .btn-outline-dark:focus, .btn-outline-dark.focus {
-    box-shadow: 0 0 0 0.2rem rgba(21, 18, 56, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(72, 16, 239, 0.5); }
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-    color: #151238;
+    color: #4810ef;
     background-color: transparent; }
   .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
   .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
-    background-color: #151238;
-    border-color: #151238; }
+    background-color: #4810ef;
+    border-color: #4810ef; }
     .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-dark.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(21, 18, 56, 0.5); }
+      box-shadow: 0 0 0 0.2rem rgba(72, 16, 239, 0.5); }
 
 .btn-link {
   font-weight: 400;
@@ -3143,11 +3143,11 @@ tbody.collapse.show {
 
 .badge-dark {
   color: #fff;
-  background-color: #151238; }
+  background-color: #4810ef; }
   .badge-dark[href]:hover, .badge-dark[href]:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #070611; }
+    background-color: #3a0dbf; }
 
 .jumbotron {
   padding: 2rem 1rem;
@@ -3246,13 +3246,13 @@ tbody.collapse.show {
     color: #686868; }
 
 .alert-dark {
-  color: #0b091d;
-  background-color: #d0d0d7;
-  border-color: #bdbdc7; }
+  color: #25087c;
+  background-color: #dacffc;
+  border-color: #ccbcfb; }
   .alert-dark hr {
-    border-top-color: #afafbb; }
+    border-top-color: #baa4fa; }
   .alert-dark .alert-link {
-    color: black; }
+    color: #17054c; }
 
 @keyframes progress-bar-stripes {
   from {
@@ -3417,15 +3417,15 @@ tbody.collapse.show {
     border-color: #818182; }
 
 .list-group-item-dark {
-  color: #0b091d;
-  background-color: #bdbdc7; }
+  color: #25087c;
+  background-color: #ccbcfb; }
   .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-    color: #0b091d;
-    background-color: #afafbb; }
+    color: #25087c;
+    background-color: #baa4fa; }
   .list-group-item-dark.list-group-item-action.active {
     color: #fff;
-    background-color: #0b091d;
-    border-color: #0b091d; }
+    background-color: #25087c;
+    border-color: #25087c; }
 
 .close {
   float: right;
@@ -3560,7 +3560,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Montserrat";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3644,7 +3644,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Montserrat";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3978,12 +3978,12 @@ button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
 .bg-dark {
-  background-color: #151238 !important; }
+  background-color: #4810ef !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #070611 !important; }
+  background-color: #3a0dbf !important; }
 
 .bg-white {
   background-color: #fff !important; }
@@ -4043,7 +4043,7 @@ button.bg-dark:focus {
   border-color: #F8F9FA !important; }
 
 .border-dark {
-  border-color: #151238 !important; }
+  border-color: #4810ef !important; }
 
 .border-white {
   border-color: #fff !important; }
@@ -5794,10 +5794,10 @@ a.text-light:hover, a.text-light:focus {
   color: #dae0e5 !important; }
 
 .text-dark {
-  color: #151238 !important; }
+  color: #4810ef !important; }
 
 a.text-dark:hover, a.text-dark:focus {
-  color: #070611 !important; }
+  color: #3a0dbf !important; }
 
 .text-muted {
   color: #6c757d !important; }
@@ -5864,5 +5864,30 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #ddd !important; } }
 
 body {
-  padding-top: 5em; }
+  padding-top: 5rem; }
+
+.form-control {
+  padding: 4px 10px;
+  font-size: 0.9rem; }
+
+.home-section .container-fluid {
+  position: absolute;
+  top: 30%; }
+
+.home-section h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #4810ef;
+  font-size: 4rem; }
+
+.home-section h4 {
+  font-family: "Space Mono";
+  color: #676767;
+  font-size: 2rem; }
+
+.home-section img {
+  width: 4%; }
+
+.logo {
+  width: 40px; }
 

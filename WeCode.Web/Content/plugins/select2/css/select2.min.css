@@ -10,14 +10,14 @@
         box-sizing: border-box;
         cursor: pointer;
         display: block;
-        height: 37.1px;
+        height: 31.5px;
         user-select: none;
         -webkit-user-select: none
     }
 
         .select2-container .select2-selection--single .select2-selection__rendered {
             display: block;
-            padding-left: 8px;
+            padding-left: 10px;
             padding-right: 20px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -69,7 +69,7 @@
 .select2-dropdown {
     background-color: white;
     border: 1px solid #aaa;
-    border-radius: 4px;
+    border-radius: 0;
     box-sizing: border-box;
     display: block;
     position: absolute;
@@ -167,12 +167,13 @@
 .select2-container--default .select2-selection--single {
     background-color: #fff;
     border: 1px solid #ced4da;
-    border-radius: 4px
+    border-radius: 0px
 }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
         color: #495057;
-        line-height: 36px
+        line-height: 31px;
+        font-size: .9rem;
     }
 
     .select2-container--default .select2-selection--single .select2-selection__clear {
@@ -188,7 +189,7 @@
     .select2-container--default .select2-selection--single .select2-selection__arrow {
         height: 36px;
         position: absolute;
-        top: 1px;
+        top: -2px;
         right: 1px;
         width: 20px
     }

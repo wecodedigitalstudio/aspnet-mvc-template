@@ -181,6 +181,10 @@
     <Content Include="build\devs_index_page.js" />
     <Content Include="build\home_page.js" />
     <Content Include="build\select2_page.js" />
+    <Content Include="Content\img\facebook-app-logo.svg" />
+    <Content Include="Content\img\github-logo.svg" />
+    <Content Include="Content\img\logo-navbar.svg" />
+    <Content Include="Content\img\we-code-logo.svg" />
     <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.it.min.js" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />

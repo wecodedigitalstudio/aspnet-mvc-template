@@ -2,8 +2,6 @@
 import Vue from "vue";
 import HomeComponent from "../components/home.vue";
 
-// https://github.com/Microsoft/TypeScript-Vue-Starter
-
 export class HomePage {
 
 
