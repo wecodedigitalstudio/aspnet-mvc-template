@@ -203,7 +203,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="src\app.js" />
     <Content Include="src\components\common\confirmDialog.vue" />
     <Content Include="src\components\common\validationDialog.vue" />
     <Content Include="src\components\common\notificationDialog.vue" />
