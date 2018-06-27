@@ -23,10 +23,14 @@ $body-bg: $secondary;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    padding-top: 5em;
+}
+
 .form-control {
     border-radius: 4px;
 }
 
 .btn-primary {
-    border-radius: 4px;
+    border-radius: 8px;
 }

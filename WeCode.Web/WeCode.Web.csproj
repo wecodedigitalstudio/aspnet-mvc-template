@@ -184,6 +184,7 @@
     <Content Include="Content\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.it.min.js" />
     <Content Include="Content\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Content\plugins\bootstrap\bootstrap.min.css" />
     <Content Include="Content\plugins\bootstrap\bootstrap.min.js" />
     <Content Include="Content\plugins\datatables\css\dataTable.b4.css" />
     <Content Include="Content\plugins\datatables\dataTable.b4.js" />
@@ -221,7 +222,6 @@
     <Content Include="Content\css\custom.min.css">
       <DependentUpon>custom.css</DependentUpon>
     </Content>
-    <Content Include="gulpfile.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
