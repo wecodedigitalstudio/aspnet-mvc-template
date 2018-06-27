@@ -13,6 +13,9 @@ namespace WeCode.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //https://code.i-harness.com/it/q/1071ec7
+            routes.LowercaseUrls = true;
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
