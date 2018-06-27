@@ -17,37 +17,7 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
-                //options: {
-                //    loaders: {
-                //        // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-                //        // the "scss" and "sass" values for the lang attribute to the right configs here.
-                //        // other preprocessors should work out of the box, no loader config like this necessary.
-                //        'scss': 'vue-style-loader!css-loader!sass-loader',
-                //        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
-                //    }
-                //    // other vue-loader options go here
-                //}
-            },
-            {
-                test: /\.(scss)$/,
-                use: [{
-                    loader: 'style-loader', // inject CSS to page
-                }, {
-                    loader: 'css-loader', // translates CSS into CommonJS modules
-                }, {
-                    loader: 'postcss-loader', // Run post css actions
-                    options: {
-                        plugins: function () { // post css plugins, can be exported to postcss.config.js
-                            return [
-                                require('precss'),
-                                require('autoprefixer')
-                            ];
-                        }
-                    }
-                }, {
-                    loader: 'sass-loader' // compiles Sass to CSS
-                }]
+                loader: 'vue-loader'
             },
             {
                 test: /\.js$/,
