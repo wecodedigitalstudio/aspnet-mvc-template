@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="@Url.Content("~/Content/css/custom.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css")" />
+
     <script src="@Url.Content("~/Content/plugins/jquery/jquery.min.js")"></script>
     <script src="@Url.Content("~/Content/plugins/bootstrap/bootstrap.min.js")"></script>
     <script src="@Url.Content("~/Content/plugins/select2/select2.full.min.js")"></script>
@@ -24,10 +26,9 @@
         @Html.Partial("_Menu")
     </header>
 
-    <!-- Body -->
-    <main role="main" class="container" style="margin-top:5em">
-        @RenderBody()
-    </main>
+    <!-- Body -->    
+    @RenderBody()
+    
 
     <script src="@Url.Content("~/Content/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Content/plugins/bootstrap-datepicker/js/bootstrap-datepicker.it.min.js")" type="text/javascript"></script>

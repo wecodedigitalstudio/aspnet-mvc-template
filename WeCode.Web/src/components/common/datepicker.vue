@@ -4,8 +4,6 @@
 
 <script>
 
-    import bootstrapDatepicker from 'bootstrap-datepicker';
-    //import bootstrapDatepickerIt from '../../../Content/plugins/bootstrap-datepicker/js/bootstrap-datepicker.it.min.js';
 
     export default {
         props: ['value'],
@@ -35,9 +33,6 @@
         }
     }
 
-</script>
 
-<style lang="css">
-    @import '/Content/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css';
-</style>
+</script>
 
