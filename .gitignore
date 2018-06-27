@@ -13,3 +13,4 @@
 /**/node_modules
 /WeCode.Web/build/**/*.js
 /WeCode.Web/src/**/*.js
+/WeCode.Web/.vscode
