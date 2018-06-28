@@ -3,6 +3,12 @@
     <!-- Pannello modale del caricamento -->
     <waiter ref="waiter"></waiter>
 
+    <!-- Pannelli modali di conferma azioni -->
+    <notification-dialog ref="savedDialog"
+                         :title="'Confirm save'"
+                         :message="'Developer has been saved correctly'"
+                         v-on:ok="window.location = '/devs/details?id=' + dev.Id"></notification-dialog>
+
     <input hidden id="id" value="@Request["id"]" />
 
     <h1>{{title}} details</h1>
@@ -41,7 +47,7 @@
     <!-- Buttons -->
     <div class="row pt-3">
         <div class="col-md-12 text-right">
-            <button v-on:click="onSave()" class="btn btn-primary">Save</button>           
+            <button v-on:click="onSave()" class="btn btn-primary">Save</button>
         </div>
     </div>
 

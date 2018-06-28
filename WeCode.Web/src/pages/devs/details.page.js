@@ -61,7 +61,7 @@ var DevsEditPage = /** @class */ (function (_super) {
         skillsOption.push(new DropdownItem("FullStack", "Full-Stack"));
         return skillsOption;
     };
-    // update details dev
+    // save details developers
     DevsEditPage.prototype.onSave = function () {
         var _this = this;
         this.$refs.waiter.open();
@@ -70,11 +70,13 @@ var DevsEditPage = /** @class */ (function (_super) {
             if (response.data != undefined) {
                 // TODO: msg di validazione
                 _this.$refs.waiter.close();
+                _this.$refs.savedDialog.open();
             }
             else {
                 // save OK !!
                 _this.dev = response.data;
                 _this.$refs.waiter.close();
+                //this.$refs.savedDialog.open();
             }
         });
     };

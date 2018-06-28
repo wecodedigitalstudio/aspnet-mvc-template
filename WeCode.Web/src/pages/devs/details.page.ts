@@ -31,7 +31,7 @@ export default class DevsEditPage extends Vue {
     // reference childComponents
     $refs: {
         waiter: Vue,
-        notificationDialog: Vue
+        savedDialog: Vue
     }
 
     public id: string;
@@ -73,7 +73,7 @@ export default class DevsEditPage extends Vue {
         return skillsOption;
     }
 
-    // update details dev
+    // save details developers
     public onSave() {
 
         this.$refs.waiter.open();
@@ -83,10 +83,12 @@ export default class DevsEditPage extends Vue {
                 if (response.data != undefined) {
                     // TODO: msg di validazione
                     this.$refs.waiter.close();
+                    this.$refs.savedDialog.open();
                 } else {
                     // save OK !!
                     this.dev = response.data;
                     this.$refs.waiter.close();
+                    //this.$refs.savedDialog.open();
                 }
             });        
 
