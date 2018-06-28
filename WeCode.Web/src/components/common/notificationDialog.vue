@@ -41,7 +41,6 @@
             document.addEventListener("keyup", function (event: any) {
                 if ($(nd.$el).hasClass('show')) {
                     if (event.keyCode === 13) {
-                        console.log(event.keyCode);
                         nd.$emit('ok');
                     }
                 }
