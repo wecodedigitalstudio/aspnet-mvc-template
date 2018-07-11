@@ -1,16 +1,19 @@
 ﻿<template>
 
-    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog modal-sm">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+                    <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     {{message}}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" v-on:click="$emit('ok')" class="btn btn-default ok" data-dismiss="modal">Ok</button>
+                    <button type="button" v-on:click="$emit('ok')" class="btn btn-primary" data-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
@@ -35,10 +38,9 @@
 
         mounted() {
             let nd = this;
-            document.addEventListener("keyup", function (e: any) {
-
-                if ($(nd.$el).hasClass('in')) {
-                    if (e.keyCode === 27 || e.keyCode === 13) {
+            document.addEventListener("keyup", function (event: any) {
+                if ($(nd.$el).hasClass('show')) {
+                    if (event.keyCode === 13) {
                         nd.$emit('ok');
                     }
                 }
