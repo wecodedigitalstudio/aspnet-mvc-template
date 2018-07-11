@@ -1,31 +1,22 @@
 ﻿<div id="index-devs-page">
 
-    <table class="table table-striped table-bordered" id="devs-table" style="width:100%">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Category</th>
-                <th>Birthday</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <h1>{{title}}</h1>
+
+    <data-table :columns="columnOptions" >
+        <template slot="thead">
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Category</th>
+            <th>Birthday</th>
+            <th>Actions</th>
+        </template>
+    </data-table>
 
 </div>
 
 <link rel="stylesheet" href="~/Content/plugins/datatables/css/dataTable.b4.css" />
 <script src="~/Content/plugins/datatables/jquery.dataTables.js"></script>
 <script src="~/Content/plugins/datatables/dataTable.b4.js"></script>
-<script src="~/src/pages/devs/index.page.js"></script>
 
-<script>
-
-
-    jQuery(document).ready(function () {
-        var devsIndex = new DevsIndex();
-    });
-
-</script>
+<script type="application/javascript" src="~/build/devs_index_page.js"></script>

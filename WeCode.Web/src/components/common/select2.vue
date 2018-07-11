@@ -15,6 +15,9 @@
 
         // init
         mounted: function () {
+
+            console.log("options", this.options);
+
             if (this.url) {
                 this.initAjax();
             }

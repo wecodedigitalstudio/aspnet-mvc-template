@@ -211,7 +211,10 @@
     <Content Include="src\components\common\validationDialog.vue" />
     <Content Include="src\components\common\notificationDialog.vue" />
     <Content Include="src\components\common\waiter.vue" />
+    <Content Include="Views\Devs\Index - Old.cshtml" />
+    <Content Include="src\components\common\dataTable.vue" />
     <TypeScriptCompile Include="src\models\dropdown.model.ts" />
+    <TypeScriptCompile Include="src\pages\devs\index_vue.page.ts" />
     <TypeScriptCompile Include="src\pages\devs\details.page.ts" />
     <Content Include="src\pages\devs\index.page.js" />
     <Content Include="webpack.config.js" />

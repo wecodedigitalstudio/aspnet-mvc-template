@@ -1,16 +1,12 @@
 
 function DevsIndex() {
 
-    $('#devs-table').DataTable({
+    var table = $('#devs-table').DataTable({
         processing: true,
-        serverSide: true,
+        serverSide: false,
         paging: true,
         lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
         pageLength: 10,
-        ajax: {
-            type: "GET",
-            url: "api/devs/Search"
-        },
         columns: [
             { "data": "Id" },
             { "data": "FirstName" },
@@ -24,6 +20,16 @@ function DevsIndex() {
                 }
             }
         ]
+
+    });
+
+
+
+    $.getJSON("/api/devs", function (result) {
+
+        table.clear();
+        table.rows.add(result);
+        table.draw();
 
     });
 
