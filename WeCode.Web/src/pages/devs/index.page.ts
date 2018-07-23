@@ -2,7 +2,10 @@
 import Component from "vue-class-component";
 import { Prop, Watch, Emit } from "vue-property-decorator";
 import DataTable from '../../components/common/dataTable.vue';
-//import { ColumnOption } from '../../components/common/column.option';
+
+import { DevsService } from '../../services/devs.service';
+import { Developer } from '../../models/developer.model';
+
 
 declare module 'vue/types/vue' {
     interface Vue {
@@ -20,12 +23,16 @@ declare module 'vue/types/vue' {
 
 export default class DevsIndexPage extends Vue {
 
-    public title: string = "devs";
+    private devsService: DevsService;
 
+    public title: string = "devs";
     public columnOptions: any[] = [];
+    public devs: Developer[] = [];
 
     constructor() {
         super();
+
+        this.devsService = new DevsService();
     }
 
     public mounted() {
@@ -40,7 +47,10 @@ export default class DevsIndexPage extends Vue {
                 return '<a class="edit" href="/devs/details?id=' + row.Id + '" >Details</a>';
             } });
 
-
+        this.devsService.getDevs()
+            .then(response => {
+                this.devs = response.data;
+            });
     }
     
 

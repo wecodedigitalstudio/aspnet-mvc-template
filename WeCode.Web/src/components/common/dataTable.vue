@@ -19,7 +19,7 @@
 
     export default {
 
-        props: ['columns'],
+        props: ['columns', 'rows'],
 
         mounted: function () { },
 
@@ -27,6 +27,12 @@
 
             columns: function (columns) {
                 this.init(columns);
+            },
+
+            rows: function (rows) {
+                table.clear();
+                table.rows.add(rows);
+                table.draw();
             }
 
         },
@@ -42,14 +48,6 @@
                     lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
                     pageLength: 10,
                     columns: columns
-
-                });
-
-                $.getJSON("/api/devs", function (result) {
-
-                    table.clear();
-                    table.rows.add(result);
-                    table.draw();
 
                 });
 

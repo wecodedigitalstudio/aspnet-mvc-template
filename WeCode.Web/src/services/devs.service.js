@@ -3,9 +3,6 @@ import axios from 'axios';
 var DevsService = /** @class */ (function () {
     function DevsService() {
     }
-    DevsService.prototype.test = function () {
-        return "ok";
-    };
     DevsService.prototype.getDevs = function () {
         return axios.get('/api/devs');
     };

@@ -8,10 +8,6 @@ export class DevsService {
 
     constructor() { }
 
-    public test(): string {
-        return "ok";
-    }
-
     public getDevs(): AxiosPromise<Developer[]> {
         return axios.get('/api/devs');
     }

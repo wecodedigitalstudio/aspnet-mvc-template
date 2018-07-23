@@ -34,8 +34,9 @@ export default class DevsEditPage extends Vue {
         savedDialog: Vue
     }
 
-    public id: string;
     private devsService: DevsService;
+
+    public id: string;    
     public dev: Developer;
     public title: string;
     public optionSkills: DropdownItem[] = [];
