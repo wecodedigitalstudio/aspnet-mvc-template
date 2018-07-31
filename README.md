@@ -1,4 +1,4 @@
-# aspnet-mvc-template
-Asp.NET MVC Template
+# ASP.NET MVC Template
+#### Digital Studio We-Code - Mobile APP and Web Development
 
-http://we-code-template.azurewebsites.net/
+Remote link: http://we-code-template.azurewebsites.net/
